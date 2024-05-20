@@ -1,4 +1,4 @@
-module pontil
+module github.com/pontuspalmenas/pontil
 
 go 1.22
 
