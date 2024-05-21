@@ -1,4 +1,4 @@
-package util
+package pontil
 
 func OrPanic(err error) {
 	if err != nil {
