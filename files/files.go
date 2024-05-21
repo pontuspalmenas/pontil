@@ -7,6 +7,9 @@ import (
 
 func ForAllFilesInDir(path string, f func(file *os.File) error) error {
 	err := filepath.Walk(path, func(filePath string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
 		if !info.IsDir() {
 			file, err := os.Open(filePath)
 			if err != nil {
