@@ -14,6 +14,14 @@ func MustGet(name string) string {
 	return v
 }
 
+func GetOrDefault(name string, def string) string {
+	v := os.Getenv(name)
+	if v == "" {
+		return def
+	}
+	return v
+}
+
 func Load(env string) {
 	pontil.OrPanic(godotenv.Load(env + ".env"))
 }
