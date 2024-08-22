@@ -16,8 +16,16 @@ func Debug(s string) {
 	writeLog("[DEBUG] " + s + "\n")
 }
 
+func Debugf(format string, a ...any) {
+	Debug(fmt.Sprintf(format, a...))
+}
+
 func Info(s string) {
 	writeLog("[INFO] " + s + "\n")
+}
+
+func Infof(format string, a ...any) {
+	Info(fmt.Sprintf(format, a...))
 }
 
 func Error(s string) {
