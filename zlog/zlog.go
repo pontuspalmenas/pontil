@@ -24,6 +24,10 @@ func Error(s string) {
 	writeLog("[ERROR] " + s + "\n")
 }
 
+func Errorf(format string, a ...any) {
+	Error(fmt.Sprintf(format, a...))
+}
+
 func writeLog(s string) {
 	fmt.Print(s)
 }
